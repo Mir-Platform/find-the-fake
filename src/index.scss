@@ -1,49 +1,43 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-body {
-  font-size: 40pt;
-}
-
-h1 {
-  font-size: 60pt;
-}
-
-/*
-.orange {
-  color: #fd680e;
-}
-
-.table-bordered {
-  font-size: 0.8em;
-}
-
-.desktop {
-  display: table-row;
-}
-
-.desktop-cell {
-  display: table-cell;
-}
 
 
-.mobile {
-  display: none;
-}
+  /*
+  .orange {
+    color: #fd680e;
+  }
 
-@media (-webkit-min-device-pixel-ratio: 2) {
-  html, body {
-    font-size: 13pt;
+  .table-bordered {
+    font-size: 0.8em;
   }
 
   .desktop {
-    display: none;
+    display: table-row;
   }
 
   .desktop-cell {
+    display: table-cell;
+  }
+
+
+  .mobile {
     display: none;
   }
 
-  .mobile {
-    display: table-row;
-  }
-}*/
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    html, body {
+      font-size: 13pt;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    .desktop-cell {
+      display: none;
+    }
+
+    .mobile {
+      display: table-row;
+    }
+  }*/

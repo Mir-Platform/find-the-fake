@@ -1,30 +1,29 @@
-import React from "react"
+import React, {useContext} from "react"
+import Context from "./context"
+import {NEXT} from "./types";
 
-type WelcomeProps = {
-    hidden: boolean
-}
+type WelcomeProps = {}
 
 export default function Welcome(props: WelcomeProps) {
-	return (
-		<>
-			<div className={"row" + (props.hidden ? "invisible" : "visible")}>
-				<h1 className="text-center">Найди фейки</h1>
-				<p>
+    const dispatch = useContext(Context)
+
+    return (
+        <>
+            <div className="row">
+                <p>
                     Вы увидите несколько фотографий людей. Часть из них настоящие, а другая часть - изображения, созданные с помощью машинного
                     обучения.
-				</p>
-				<p>
+                </p>
+                <p className="text-center">
                     Готовы найти “фейки” быстрее всех?
-				</p>
-			</div>
-			<div className={"row " + (props.hidden ? "invisible" : "visible")}>
-				<div className="col"></div>
-				<div className="col">
-					<input type="submit" value="Старт"/>
-				</div>
-				<div className="col"></div>
-			</div>
-		</>
-	)
+                </p>
+            </div>
+            <div className="row">
+                <div className="col text-center">
+                    <button type="button" className="btn btn-primary btn-lg" onClick={() => dispatch({type: NEXT})}>Старт</button>
+                </div>
+            </div>
+        </>
+    )
 
 }
