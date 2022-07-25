@@ -6,6 +6,6 @@ import {createRoot} from "react-dom/client"
 import App from "./app"
 import Reducer from "./reducer"
 
-createRoot(document.getElementById("app")!).render(
+createRoot(document.getElementById("app")).render(
 	<App reducer={Reducer()}/>
 )

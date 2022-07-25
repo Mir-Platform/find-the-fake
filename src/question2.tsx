@@ -1,10 +1,10 @@
-import React, {useContext} from "react"
+import React, {ReactNode, useContext} from "react"
 import Context from "./context"
 import {FAIL, NEXT} from "./types"
 
 type Question2Props = {
     time: number
-    photos: any[]
+    photos: ReactNode[]
 }
 
 export function Question2(props: Question2Props) {
