@@ -2,18 +2,14 @@ import React, {useContext} from "react"
 import Context from "./context"
 import {INIT} from "./types"
 
-type WinProps = {
-    time: number
-}
-
-export function Win(props: WinProps) {
-	const dispatch = useContext(Context)
+export function Win() {
+	const [state, dispatch] = useContext(Context)
 
 	return (
 		<>
 			<div className="row">
 				<p>
-                    Ура! Вы победили! Ваше время: {props.time}ms
+					Ура! Вы победили! Ваше время: {state.time / 1000.0}ms
 
 				</p>
 			</div>

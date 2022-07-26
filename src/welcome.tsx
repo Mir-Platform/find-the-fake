@@ -3,17 +3,17 @@ import Context from "./context"
 import {NEXT} from "./types"
 
 export default function Welcome() {
-	const dispatch = useContext(Context)
+	const [, dispatch] = useContext(Context)
 
 	return (
 		<>
 			<div className="row">
 				<p>
-                    Вы увидите несколько фотографий людей. Часть из них настоящие, а другая часть - изображения, созданные с помощью машинного
-                    обучения.
+					Вы увидите несколько фотографий людей. Часть из них настоящие, а другая часть - изображения, созданные с помощью машинного
+					обучения.
 				</p>
 				<p className="text-center">
-                    Готовы найти “фейки” быстрее всех?
+					Готовы найти “фейки” быстрее всех?
 				</p>
 			</div>
 			<div className="row">
