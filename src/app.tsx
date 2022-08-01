@@ -38,11 +38,13 @@ export default function App(props: AppProps) {
 
 	return (
 		<Context.Provider value={[state, dispatch]}>
-			<div className="container">
-				<div className="row">
-					<div className="col">
+			<div className="container bg-transparent">
+				<div className="row mt-2">
+					<div className="col-4"></div>
+					<div className="col-4  header rounded-top">
 						<h1 className="text-center">Найди фейки</h1>
 					</div>
+					<div className="col-4"></div>
 				</div>
 				{showStep()}
 			</div>

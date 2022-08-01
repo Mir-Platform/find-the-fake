@@ -10,7 +10,7 @@ type PhotoProps = {
 export default function Photo(props: PhotoProps) {
 	const [state] = useContext(Context)
 
-	let borderClass = "border-5 "
+	let borderClass = "border-5 photo-border "
 
 	if (state.isFailed) {
 		if (!props.photo.isTrue) {

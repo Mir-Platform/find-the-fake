@@ -7,13 +7,12 @@ export function Win() {
 
 	return (
 		<>
-			<div className="row">
-				<p>
-					Ура! Вы победили! Ваше время: {state.time / 1000.0}ms
-
-				</p>
+			<div className="row message pt-3">
+				<div className="col">
+					<h4>Ура! Вы победили! Ваше время: {(state.time / 1000.0).toFixed(3)}ms</h4>
+				</div>
 			</div>
-			<div className="row">
+			<div className="row mt-3">
 				<div className="col text-center">
 					<button type="button" className="btn btn-primary btn-lg" onClick={() => dispatch({type: INIT})}>Ещё раз?</button>
 				</div>

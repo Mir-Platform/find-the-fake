@@ -1,43 +1,90 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+$textColor: #fff;
+$orange: #ff8300;
+$blue: #1e5bd7;
+$lightBlue: #00afff;
+
+body {
+  background: linear-gradient($blue, $lightBlue) fixed;
+  color: $textColor;
+  font-family: 'Gotham', Arial, sans-serif;
+}
+
+.header {
+  background-color: $lightBlue;
+  box-shadow: 3px 0 0.5px $textColor;
+}
+
+.message {
+  @include border-radius($radius: $border-radius, $fallback-border-radius: false);
+  background-color: $lightBlue;
+  box-shadow: 3px 3px 0.5px $textColor;
+}
+
+.photo-border {
+  @include border-radius($radius: $border-radius, $fallback-border-radius: false);
+  background-color: $lightBlue;
+  box-shadow: 3px 3px 0.5px $textColor;
+}
+
+.border-primary {
+  border-color: $orange !important;
+}
+
+.btn-primary {
+  @include button-variant($orange, darken($orange, 7.5%), darken($orange, 10%), lighten($orange, 5%), lighten($orange, 10%), darken($orange, 30%));
+  color: #ffffff;
+  box-shadow: 3px 3px 0.5px $textColor;
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($orange, #222222, lighten($orange, 5%), $orange);
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  box-shadow: none;
+}
 
 
-  /*
-  .orange {
-    color: #fd680e;
-  }
 
-  .table-bordered {
-    font-size: 0.8em;
+/*
+.orange {
+  color: #fd680e;
+}
+
+.table-bordered {
+  font-size: 0.8em;
+}
+
+.desktop {
+  display: table-row;
+}
+
+.desktop-cell {
+  display: table-cell;
+}
+
+
+.mobile {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  html, body {
+    font-size: 13pt;
   }
 
   .desktop {
-    display: table-row;
-  }
-
-  .desktop-cell {
-    display: table-cell;
-  }
-
-
-  .mobile {
     display: none;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2) {
-    html, body {
-      font-size: 13pt;
-    }
+  .desktop-cell {
+    display: none;
+  }
 
-    .desktop {
-      display: none;
-    }
-
-    .desktop-cell {
-      display: none;
-    }
-
-    .mobile {
-      display: table-row;
-    }
-  }*/
+  .mobile {
+    display: table-row;
+  }
+}*/

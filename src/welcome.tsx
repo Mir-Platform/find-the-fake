@@ -7,16 +7,16 @@ export default function Welcome() {
 
 	return (
 		<>
-			<div className="row">
-				<p>
+			<div className="row message pt-3">
+				<h5>
 					Вы увидите несколько фотографий людей. Часть из них настоящие, а другая часть - изображения, созданные с помощью машинного
 					обучения.
-				</p>
-				<p className="text-center">
+				</h5>
+				<h4 className="text-center mt-3 fw-bold">
 					Готовы найти “фейки” быстрее всех?
-				</p>
+				</h4>
 			</div>
-			<div className="row">
+			<div className="row mt-3">
 				<div className="col text-center">
 					<button type="button" className="btn btn-primary btn-lg" onClick={() => dispatch({type: NEXT})}>Старт</button>
 				</div>
