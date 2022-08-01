@@ -6,14 +6,14 @@ $blue: #1e5bd7;
 $lightBlue: #00afff;
 
 body {
-  background: linear-gradient($blue, $lightBlue) fixed;
   color: $textColor;
-  font-family: 'Gotham', Arial, sans-serif;
+  font-family: "Gotham", Arial, sans-serif;
 }
 
 .header {
   background-color: $lightBlue;
-  box-shadow: 3px 0 0.5px $textColor;
+  box-shadow: 3px 3px 0.5px $textColor;
+  z-index: -1;
 }
 
 .message {
