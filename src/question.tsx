@@ -13,9 +13,9 @@ export function Question(props: QuestionProps) {
 	const message = state.isFailed ? <h4>Вы проиграли;(</h4> : <h4>{props.task}</h4>
 
 	const photos = state.photos.map(photo => {
-			photo.url = (photo.isTrue ? "./img/true.jpg" : "./img/fake.jpg")
-			return photo
-		}
+		photo.url = (photo.isTrue ? "./img/true.jpg" : "./img/fake.jpg")
+		return photo
+	}
 	).map((photo, index) =>
 		<Photo key={index} photo={photo} onClick={() => dispatch({type: CLICK_ON_PHOTO, index: index})}/>
 	)
