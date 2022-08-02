@@ -5,13 +5,10 @@ import React from "react"
 import {createRoot} from "react-dom/client"
 import App from "./app"
 import Reducer from "./reducer"
+import files from "./files"
 
-fetch("files.json").then((res) => {
-	res.json().then((files) => {
-		createRoot(document.getElementById("app")).render(
-			<App reducer={Reducer()} files={files}/>
-		)
-	})
-})
+createRoot(document.getElementById("app")).render(
+	<App reducer={Reducer(files)}/>
+)
 
 

@@ -5,7 +5,6 @@ import Photo from "./photo"
 
 type QuestionProps = {
 	task: string
-	files: Files
 }
 
 export function Question(props: QuestionProps) {
@@ -13,11 +12,7 @@ export function Question(props: QuestionProps) {
 
 	const message = state.isFailed ? <h4>Вы проиграли;(</h4> : <h4>{props.task}</h4>
 
-	const photos = state.photos.map(photo => {
-		photo.url = props.files[photo.isTrue ? "real" : "fake"][0]
-		return photo
-	}
-	).map((photo, index) =>
+	const photos = state.photos.map((photo, index) =>
 		<Photo key={index} photo={photo} onClick={() => dispatch({type: CLICK_ON_PHOTO, index: index})}/>
 	)
 

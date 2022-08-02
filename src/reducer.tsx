@@ -1,7 +1,14 @@
-import {ActionType, CLICK_ON_PHOTO, DEFAULT_STATE, INIT, NEXT, StateType, TICK} from "./types"
+import {ActionType, CLICK_ON_PHOTO, DEFAULT_STATE, Files, INIT, NEXT, StateType, TICK} from "./types"
 import photoGenerator from "./photo-generator"
 
-export default function Reducer() {
+export default function Reducer(files: Files) {
+
+	function getRandomFile(isTrue: boolean) {
+		const photoCollection = files[isTrue ? "real" : "fake"]
+		console.log(Math.floor((Math.random() * photoCollection.length)))
+		return photoCollection[Math.floor((Math.random() * photoCollection.length))]
+	}
+
 	return (state: StateType, action: ActionType) => {
 		switch (action.type) {
 		case INIT:
@@ -27,7 +34,11 @@ export default function Reducer() {
 				if (step == 4) {
 					isRunning = false
 				} else {
-					photos = photoGenerator(step * 2 + 1, step).map(isTrue => ({isTrue: isTrue, isChecked: false}))
+					photos = photoGenerator(step * 2 + 1, step).map(isTrue => ({
+						isTrue: isTrue,
+						isChecked: false,
+						url: getRandomFile(isTrue)
+					}))
 				}
 			} else {
 				isFailed = true

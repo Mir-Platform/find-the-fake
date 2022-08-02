@@ -1,6 +1,6 @@
 const fs = require("fs")
 
-const configFile = "./docs/files.json"
+const configFile = "./src/files.tsx"
 const webDir = "./docs/"
 const realDir = "./img/real/"
 const fakeDir = "./img/fake/"
@@ -12,7 +12,7 @@ const files = {
 	fake: fs.readdirSync(webDir+ fakeDir).map((file) => fakeDir + file)
 }
 
-fs.writeFile(configFile, JSON.stringify(files), (err) => {
+fs.writeFile(configFile, "const files = " + JSON.stringify(files) +"\nexport default files", (err) => {
 	if (err) {
 		throw err
 	}

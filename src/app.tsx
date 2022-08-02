@@ -8,7 +8,6 @@ import {Question} from "./question"
 
 type AppProps = {
 	reducer: (state: StateType, action: ActionType) => StateType
-	files: Files
 }
 
 export default function App(props: AppProps) {
@@ -25,11 +24,11 @@ export default function App(props: AppProps) {
 	const showStep = () => {
 		switch (state.step) {
 		case 1:
-			return <Question task="Найдите 1 фейковую фотографию" files={props.files}/>
+			return <Question task="Найдите 1 фейковую фотографию" />
 		case 2:
-			return <Question task="Найдите 2 фейковые фотографию" files={props.files}/>
+			return <Question task="Найдите 2 фейковые фотографию"/>
 		case 3 :
-			return <Question task="Найдите 3 фейковые фотографию" files={props.files}/>
+			return <Question task="Найдите 3 фейковые фотографию"/>
 		case 4:
 			return <Win/>
 		default:
