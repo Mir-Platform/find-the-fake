@@ -1,13 +1,58 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+
 $textColor: #fff;
 $orange: #ff8300;
 $blue: #1e5bd7;
 $lightBlue: #00afff;
+$fontName: "Gotham";
+
+@font-face {
+  font-family: $fontName;
+  src: url("./fonts/gotham_thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontName;
+  src: url("./fonts/gotham_light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontName;
+  src: url("./fonts/gotham_book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontName;
+  src: url("./fonts/gotham_medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontName;
+  src: url("./fonts/gotham_bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontName;
+  src: url("./fonts/gotham_black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
 
 body {
-  font-family: "Gotham", Arial, sans-serif;
+  font-family: $fontName, Arial, sans-serif;
   color: $textColor;
+  background: url("./img/bg.png") top right/50% repeat-y , linear-gradient(#1e5bd7, #00afff) fixed
 }
 
 .header {
