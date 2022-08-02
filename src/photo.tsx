@@ -27,8 +27,6 @@ export default function Photo(props: PhotoProps) {
 		}
 	}
 
-	console.log("yes")
-
 	return (
 		<div className="col-3 d-flex justify-content-center mt-3 mb-3">
 			<img

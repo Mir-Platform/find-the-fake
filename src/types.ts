@@ -5,6 +5,11 @@ export const NEXT = "NEXT"
 
 export const DEFAULT_STATE: StateType = {step: 0, time: 0, isRunning: false, isFailed: false, photos: []}
 
+export type Files = {
+	real: string[]
+	fake: string[]
+}
+
 export type PhotoType = {
 	url?: string
 	isTrue: boolean

@@ -2,12 +2,13 @@ import React, {useEffect, useReducer} from "react"
 
 import Welcome from "./welcome"
 import {Win} from "./win"
-import {ActionType, DEFAULT_STATE, INIT, StateType, TICK} from "./types"
+import {ActionType, DEFAULT_STATE, Files, INIT, StateType, TICK} from "./types"
 import Context from "./context"
 import {Question} from "./question"
 
 type AppProps = {
 	reducer: (state: StateType, action: ActionType) => StateType
+	files: Files
 }
 
 export default function App(props: AppProps) {
@@ -24,11 +25,11 @@ export default function App(props: AppProps) {
 	const showStep = () => {
 		switch (state.step) {
 		case 1:
-			return <Question task="Найдите 1 фейковую фотографию"/>
+			return <Question task="Найдите 1 фейковую фотографию" files={props.files}/>
 		case 2:
-			return <Question task="Найдите 2 фейковые фотографию"/>
+			return <Question task="Найдите 2 фейковые фотографию" files={props.files}/>
 		case 3 :
-			return <Question task="Найдите 3 фейковые фотографию"/>
+			return <Question task="Найдите 3 фейковые фотографию" files={props.files}/>
 		case 4:
 			return <Win/>
 		default:

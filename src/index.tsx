@@ -6,6 +6,12 @@ import {createRoot} from "react-dom/client"
 import App from "./app"
 import Reducer from "./reducer"
 
-createRoot(document.getElementById("app")).render(
-	<App reducer={Reducer()}/>
-)
+fetch("files.json").then((res) => {
+	res.json().then((files) => {
+		createRoot(document.getElementById("app")).render(
+			<App reducer={Reducer()} files={files}/>
+		)
+	})
+})
+
+

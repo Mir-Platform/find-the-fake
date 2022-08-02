@@ -1,10 +1,11 @@
 import React, {useContext} from "react"
-import {CLICK_ON_PHOTO, INIT, NEXT} from "./types"
+import {CLICK_ON_PHOTO, Files, INIT, NEXT} from "./types"
 import Context from "./context"
 import Photo from "./photo"
 
 type QuestionProps = {
 	task: string
+	files: Files
 }
 
 export function Question(props: QuestionProps) {
@@ -13,7 +14,7 @@ export function Question(props: QuestionProps) {
 	const message = state.isFailed ? <h4>Вы проиграли;(</h4> : <h4>{props.task}</h4>
 
 	const photos = state.photos.map(photo => {
-		photo.url = (photo.isTrue ? "./img/true.jpg" : "./img/fake.jpg")
+		photo.url = props.files[photo.isTrue ? "real" : "fake"][0]
 		return photo
 	}
 	).map((photo, index) =>
