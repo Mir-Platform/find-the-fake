@@ -1,10 +1,16 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 
-$textColor: #fff;
+$headerColor: #ff8300;
+
+$messageTextColor: #000000;
+$messageBackground: #ffffff;
+$messageShadow: #3CB9FF;
+
+$textColor: #ffffff;
+$buttonShadow: #ffffff;
 $orange: #ff8300;
 $blue: #1e5bd7;
-$lightBlue: #00afff;
 $fontName: "Gotham";
 
 @font-face {
@@ -51,26 +57,38 @@ $fontName: "Gotham";
 
 body {
   font-family: $fontName, Arial, sans-serif;
-  color: $textColor;
+  color: $messageTextColor;
   background: url("./img/bg.png") top right/50% repeat-y , linear-gradient(#1e5bd7, #00afff) fixed
 }
 
-.header {
-  background-color: $lightBlue;
-  box-shadow: 3px 3px 0.5px $textColor;
-  z-index: -1;
+h1 {
+  color: $headerColor;
+}
+
+.panda {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 15px;
+  width: 350px;
+  height: 500px;
+  background: url("./img/red-panda.png") top left/75% no-repeat;
+}
+
+.question {
+  color: $textColor;
 }
 
 .message {
   @include border-radius($radius: $border-radius, $fallback-border-radius: false);
-  background-color: $lightBlue;
-  box-shadow: 3px 3px 0.5px $textColor;
+  background-color: $messageBackground;
+  box-shadow: 3px 3px 0.5px $messageShadow;
 }
 
 .photo-border {
   @include border-radius($radius: $border-radius, $fallback-border-radius: false);
-  background-color: $lightBlue;
-  box-shadow: 3px 3px 0.5px $textColor;
+  background-color: $messageBackground;
+  box-shadow: 3px 3px 0.5px $messageShadow;
 }
 
 .border-primary {
@@ -79,8 +97,8 @@ body {
 
 .btn-primary {
   @include button-variant($orange, darken($orange, 7.5%), darken($orange, 10%), lighten($orange, 5%), lighten($orange, 10%), darken($orange, 30%));
-  color: #ffffff;
-  box-shadow: 3px 3px 0.5px $textColor;
+  color: $textColor;
+  box-shadow: 3px 3px 0.5px $buttonShadow;
 }
 
 .btn-outline-primary {
@@ -88,7 +106,7 @@ body {
 }
 
 .btn-primary:hover {
-  color: #ffffff;
+  color: $textColor;
   box-shadow: none;
 }
 

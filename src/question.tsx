@@ -18,7 +18,7 @@ export function Question(props: QuestionProps) {
 
 	return (
 		<>
-			<div className="row message">
+			<div className="row question">
 				<div className="col-10">
 					{message}
 				</div>
@@ -32,12 +32,12 @@ export function Question(props: QuestionProps) {
 			<div className="row">
 				{!state.isFailed &&
 					<div className="col text-center">
-						<button type="button" className="btn btn-primary btn-lg" onClick={() => dispatch({type: NEXT})}>Проверить!</button>
+						<button type="button" className="btn btn-primary btn-lg fw-bolder" onClick={() => dispatch({type: NEXT})}>Проверить!</button>
 					</div>
 				}
 				{state.isFailed &&
 					<div className="col text-center">
-						<button type="button" className="btn btn-primary btn-lg" onClick={() => dispatch({type: INIT})}>Ещё раз?</button>
+						<button type="button" className="btn btn-primary btn-lg fw-bolder" onClick={() => dispatch({type: INIT})}>Ещё раз?</button>
 					</div>
 				}
 			</div>

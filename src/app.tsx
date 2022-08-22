@@ -2,7 +2,7 @@ import React, {useEffect, useReducer} from "react"
 
 import Welcome from "./welcome"
 import {Win} from "./win"
-import {ActionType, DEFAULT_STATE, Files, INIT, StateType, TICK} from "./types"
+import {ActionType, DEFAULT_STATE, INIT, StateType, TICK} from "./types"
 import Context from "./context"
 import {Question} from "./question"
 
@@ -24,11 +24,11 @@ export default function App(props: AppProps) {
 	const showStep = () => {
 		switch (state.step) {
 		case 1:
-			return <Question task="Найдите 1 фейковую фотографию" />
+			return <Question task="1 фейковую фотографию найди ты"/>
 		case 2:
-			return <Question task="Найдите 2 фейковые фотографию"/>
+			return <Question task="2 фейковые фотографию найди ты"/>
 		case 3 :
-			return <Question task="Найдите 3 фейковые фотографию"/>
+			return <Question task="3 фейковые фотографию найди ты"/>
 		case 4:
 			return <Win/>
 		default:
@@ -40,11 +40,7 @@ export default function App(props: AppProps) {
 		<Context.Provider value={[state, dispatch]}>
 			<div className="container bg-transparent">
 				<div className="row mt-2">
-					<div className="col-4"></div>
-					<div className="col-4  header rounded-top">
-						<h1 className="text-center">Найди фейки</h1>
-					</div>
-					<div className="col-4"></div>
+					<div className="col">&nbsp;</div>
 				</div>
 				{showStep()}
 			</div>
