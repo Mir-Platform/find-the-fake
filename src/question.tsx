@@ -19,11 +19,8 @@ export function Question(props: QuestionProps) {
 	return (
 		<>
 			<div className="row question">
-				<div className="col-10">
+				<div className="col text-center">
 					{message}
-				</div>
-				<div className="col-2 justify-content-center">
-					<h4>{(state.time / 1000.0).toFixed(3)} ms</h4>
 				</div>
 			</div>
 			<div className="row justify-content-center">
@@ -40,6 +37,11 @@ export function Question(props: QuestionProps) {
 						<button type="button" className="btn btn-primary btn-lg fw-bolder" onClick={() => dispatch({type: INIT})}>Ещё раз?</button>
 					</div>
 				}
+			</div>
+			<div className="row question mt-3">
+				<div className="col text-center">
+					<h4>{(state.time / 1000.0).toFixed(3)} ms</h4>
+				</div>
 			</div>
 		</>
 	)

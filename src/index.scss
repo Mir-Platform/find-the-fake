@@ -58,7 +58,7 @@ $fontName: "Gotham";
 body {
   font-family: $fontName, Arial, sans-serif;
   color: $messageTextColor;
-  background: url("./img/bg.png") top right/50% repeat-y , linear-gradient(#1e5bd7, #00afff) fixed
+  background: url("./img/bg.png") top right/60% no-repeat , linear-gradient(#1e5bd7, #00afff) fixed;
 }
 
 h1 {
@@ -68,8 +68,8 @@ h1 {
 .panda {
   display: block;
   position: absolute;
-  top: 22px;
-  left: 15px;
+  top: 90px;
+  left: 90px;
   width: 350px;
   height: 500px;
   background: url("./img/red-panda.png") top left/75% no-repeat;
@@ -110,44 +110,3 @@ h1 {
   box-shadow: none;
 }
 
-
-
-/*
-.orange {
-  color: #fd680e;
-}
-
-.table-bordered {
-  font-size: 0.8em;
-}
-
-.desktop {
-  display: table-row;
-}
-
-.desktop-cell {
-  display: table-cell;
-}
-
-
-.mobile {
-  display: none;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-  html, body {
-    font-size: 13pt;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .desktop-cell {
-    display: none;
-  }
-
-  .mobile {
-    display: table-row;
-  }
-}*/

@@ -11,10 +11,8 @@ export function Win() {
 				&nbsp;
 			</div>
 			<div className="row">
-				<div className="col-2">
-					&nbsp;
-				</div>
-				<div className="col-9 ps-5 pt-4 pb-4 message">
+				<div className="col-3"></div>
+				<div className="col-6 ps-5 pt-4 pb-4 message">
 					<h1>
 						Сумел найти все фейки ты!
 					</h1>
@@ -22,9 +20,7 @@ export function Win() {
 						Твоё лучшее время: {(state.time / 1000.0).toFixed(3)}ms
 					</h4>
 				</div>
-				<div className="col-1">
-					&nbsp;
-				</div>
+				<div className="col-3"></div>
 			</div>
 			<div className="row mt-3">
 				<div className="col text-center">
