@@ -24,11 +24,11 @@ export default function App(props: AppProps) {
 	const showStep = () => {
 		switch (state.step) {
 		case 1:
-			return <Question task="1 фотографию найди ты"/>
+			return <Question task="1 фотографию найти нужно"/>
 		case 2:
-			return <Question task="2 фотографии найди ты"/>
+			return <Question task="2 фотографии найти нужно"/>
 		case 3 :
-			return <Question task="3 фотографии найди ты"/>
+			return <Question task="3 фотографии найти нужно"/>
 		case 4:
 			return <Win/>
 		default:
@@ -38,11 +38,13 @@ export default function App(props: AppProps) {
 
 	return (
 		<Context.Provider value={[state, dispatch]}>
-			<div className="container-sm bg-transparent">
-				<div className="row">
-					<div className="col" style={{height: "150px"}}>&nbsp;</div>
+			<div className={(state.step >= 1 && state.step <= 3) ? "running-bg" : "welcome-bg"}>
+				<div className="container-sm bg-transparent">
+					<div className="row">
+						<div className="col" style={{height: (state.step >= 1 && state.step <= 3) ? "50px" : "150px"}}>&nbsp;</div>
+					</div>
+					{showStep()}
 				</div>
-				{showStep()}
 			</div>
 		</Context.Provider>
 	)

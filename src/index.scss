@@ -1,6 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-
 $headerColor: #ff8300;
 
 $messageTextColor: #000000;
@@ -55,10 +54,23 @@ $fontName: "Gotham";
   font-style: normal;
 }
 
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   font-family: $fontName, Arial, sans-serif;
   color: $messageTextColor;
-  background: url("./img/bg.png") top right/60% no-repeat , linear-gradient(#1e5bd7, #00afff) fixed;
+}
+
+.welcome-bg {
+  width: 100%;
+  height: 100vh;
+  background: url("./img/bg.png") top right/60% no-repeat, linear-gradient(#1e5bd7, #00afff) fixed;
+}
+
+.running-bg {
+  width: 100%;
+  height: 100vh;
+  background: url("./img/left.png") top left/20% repeat-y, url("./img/right.png") bottom right/20% repeat-y, #0A3184;
 }
 
 h1 {
