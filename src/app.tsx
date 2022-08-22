@@ -40,7 +40,7 @@ export default function App(props: AppProps) {
 		<Context.Provider value={[state, dispatch]}>
 			<div className="container-sm bg-transparent">
 				<div className="row">
-					<div className="col" style={{height: "175px"}}>&nbsp;</div>
+					<div className="col" style={{height: "150px"}}>&nbsp;</div>
 				</div>
 				{showStep()}
 			</div>
